@@ -1,0 +1,28 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="منصة ذكرى للترحم والدعاء للمتوفين"><title>ذِكرى</title><meta name="theme-color" content="#090c12"><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="assets/styles.css?v=14.3"></head><body>
+<div id="introScreen" class="intro-screen" aria-modal="true" role="dialog" aria-label="مقدمة موقع ذكرى">
+  <div class="intro-stars"></div>
+  <div class="intro-vignette"></div>
+  <div class="intro-content">
+    <img class="intro-logo" src="assets/icon.svg" alt="شعار ذِكرى">
+    <div class="intro-brand">ذِكرى</div>
+    <div id="introVerseText" class="intro-verse">﴿ كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ وَإِنَّمَا تُوَفَّوْنَ أُجُورَكُمْ يَوْمَ الْقِيَامَةِ فَمَن زُحْزِحَ عَنِ النَّارِ وَأُدْخِلَ الْجَنَّةَ فَقَدْ فَازَ وَمَا الْحَيَاةُ الدُّنْيَا إِلَّا مَتَاعُ الْغُرُورِ ﴾</div>
+    <p class="intro-tagline">دعاءٌ يبقى... وأجرٌ لا ينقطع</p>
+    <button id="enterSite" class="btn btn-primary intro-enter">ابدأ الزيارة واستمع للآية</button>
+    <div id="introPlayer" class="intro-player" hidden>
+      <div class="intro-progress" aria-label="تقدم التلاوة"><span id="introProgressBar"></span></div>
+      <div class="intro-time"><span id="introCurrent">٠:٠٠</span><span id="introDuration">٠:٠٠</span></div>
+    </div>
+    <button id="skipIntro" class="intro-skip" type="button">تخطي المقدمة</button>
+    <small id="introStatus" class="intro-audio-note">اضغط للبدء لأن بعض المتصفحات تمنع تشغيل الصوت تلقائيًا.</small>
+  </div>
+</div>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<header class="topbar"><div class="container nav"><a class="brand" href="/"><span class="brand-mark brand-mark-memorial"><svg viewBox="0 0 48 48" aria-hidden="true"><path class="logo-crescent" d="M31.5 7.5A17 17 0 1 0 39 36.8 15 15 0 1 1 31.5 7.5Z"/><path class="logo-book" d="M15 30.5c4-1.8 7.3-1.4 10 1.1 2.7-2.5 6-2.9 10-1.1v8.2c-4-1.5-7.3-1.1-10 1.3-2.7-2.4-6-2.8-10-1.3Z"/><path class="logo-line" d="M25 31.8V40"/><circle class="logo-star" cx="35.5" cy="13" r="1.8"/></svg></span><span class="brand-copy"><span id="brandName">ذِكرى</span><small class="brand-tagline">دعاءٌ يبقى</small></span></a><div class="nav-actions"><button id="replayIntro" class="btn btn-soft" type="button">إعادة المقدمة</button><a class="btn btn-soft" href="#memorials">الذكريات</a><a class="btn btn-primary" href="request.html">أضف ذكرى</a></div></div></header>
+<main><section class="hero"><div class="container hero-inner"><div class="hero-ornament">﴿ إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ ﴾</div><div class="hero-badge">رحمةٌ تُهدى ودعاءٌ لا ينقطع</div><h1 id="homeTitle">صدقة جارية وذكرى طيبة</h1><p id="homeDesc">اختر اسمًا لقراءة الفاتحة والدعاء له بالرحمة والمغفرة.</p><div class="hero-actions"><a class="feature-pill" href="#memorials"><span class="feature-icon">☾</span><span><b>صفحات الذكرى</b><small>دعاء وقرآن وتسبيح</small></span></a><a class="feature-pill" href="request.html"><span class="feature-icon">✦</span><span><b>أضف ذكرى لمن تحب</b><small>ترسل للمراجعة قبل النشر</small></span></a></div><div class="quick-stats"><div class="quick-stat"><b id="memorialTotal">0</b><span>صفحة ذكرى</span></div><div class="quick-stat"><b id="visitTotal">0</b><span>زيارة ودعاء</span></div><div class="quick-stat"><b>114</b><span>سورة متاحة</span></div></div><div class="searchbar"><input id="search" placeholder="ابحث باسم المتوفى..."><button class="btn btn-primary">بحث</button></div></div></section>
+<section class="section" id="memorials"><div class="container"><div class="section-head"><div><span class="eyebrow">من نحب لا يغيب</span><h2>صفحات الذكرى</h2><div class="muted" id="countText">جاري التحميل...</div></div><div class="catalog-controls"><select id="categoryFilter" class="filter-select"><option value="">كل التصنيفات</option></select><select id="sortFilter" class="filter-select"><option value="newest">الأحدث إضافة</option><option value="name">الترتيب الأبجدي</option><option value="death">تاريخ الوفاة</option></select></div></div><div id="cards" class="grid"></div></div></section></main>
+<footer class="footer"><div class="container"><div class="footer-mark">ذِكرى</div><div id="footerText"></div></div></footer>
+<audio id="entryVerse" preload="none" playsinline>
+  <source src="https://everyayah.com/data/Alafasy_128kbps/003185.mp3" type="audio/mpeg">
+</audio>
+<script src="assets/config.js?v=14.3"></script>
+<script src="assets/home-v14.js?v=14.3"></script></body></html>

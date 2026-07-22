@@ -1,0 +1,13 @@
+{
+  "name":"ذِكرى - دعاء لا ينقطع",
+  "short_name":"ذِكرى",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#07090d",
+  "theme_color":"#0b0f16",
+  "lang":"ar",
+  "dir":"rtl",
+  "icons":[
+    {"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
